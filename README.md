@@ -11,7 +11,7 @@ Solution: Design a robust, on-premises foundation as the first phase of a larger
 
 # Key Design Objectives
 
-- Centralized Management: Implement Active Directory Domain Services (AD DS) to replace local workgroup accounts.
+- **Centralized Management**: Implement Active Directory Domain Services (AD DS) to replace local workgroup accounts.
 
 - High Availability: Eliminate single points of failure for critical services like Domain Controllers, DNS, DHCP, and file servers.
 
