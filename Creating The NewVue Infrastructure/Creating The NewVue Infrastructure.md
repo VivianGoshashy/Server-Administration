@@ -46,7 +46,7 @@ You will complete the following tasks:
 # Task 0: Pre-Network Setup (VirtualBox NAT Network – Recommended)
 To ensure both inter-VM communication and internet access, you will create a NAT Network in VirtualBox.
 
-# Steps:
+### Steps:
 1.	Open VirtualBox Manager
 2.	Go to File → Tools → Network → NAT Networks
 3.	Click the Create (+) button to create a new NAT Network
@@ -59,7 +59,7 @@ Checkpoint 0: Screenshot of NAT Network settings showing the network name (NV-NA
 
 # Task 1: Create and Configure NV-DC1
 
-# Phase 1: Create New VM
+### Phase 1: Create New VM
 - Open VirtualBox Manager → Click New
 - Name: NV-DC1
 - Type: Microsoft Windows
@@ -67,21 +67,21 @@ Checkpoint 0: Screenshot of NAT Network settings showing the network name (NV-NA
   
 Checkpoint 1.1: Screenshot of New VM dialog with name and OS version
 
-# Phase 2: Assign Resources
+### Phase 2: Assign Resources
 - Memory (RAM): 4096 MB
 - CPU: 2 cores
 - Hard Disk: VDI, dynamically allocated, 50 GB
   
 Checkpoint 1.2: Screenshot of RAM, CPU, and disk settings
 
-# Phase 3: Attach Server ISO Image
+### Phase 3: Attach Server ISO Image
 - Go to Settings → Storage
 - Under Controller: IDE, click the empty disk icon
 - Click Choose a disk file → Select Windows Server 2022 ISO
   
 Checkpoint 1.3: Screenshot of Storage settings showing ISO attached
 
-# Phase 4: Start and Install Windows Server
+### Phase 4: Start and Install Windows Server
 - Start the VM and follow the installation wizard:
      - Language: English
      - Edition: Windows Server 2022 Standard (Desktop Experience)
@@ -91,7 +91,7 @@ Checkpoint 1.3: Screenshot of Storage settings showing ISO attached
   
 Checkpoint 1.4: Screenshot of setup/login screen
 
-# Phase 5: Post-Installation Setup
+### Phase 5: Post-Installation Setup
 1. Change hostname to NV-DC1 and restart
 2. Run ipconfig to observe DHCP IP details
 3. Manually assign the same IP address as static
@@ -99,19 +99,19 @@ Checkpoint 1.4: Screenshot of setup/login screen
    - Gateway: same as DHCP default
    - DNS: Preferred = Gateway, Alternate = (leave blank for now)
 4. Run Windows Update
-5. 
+   
 Checkpoint 1.5: Screenshot of ipconfig output
 Checkpoint 1.6: Screenshot of manual IP configuration
 Checkpoint 1.7: Screenshot of Windows Update screen
 Task 2: Clone NV-DC1 to Create NV-DC2 and NV-FS1
 
-# Phase 1: Prepare NV-DC1 for Cloning
+### Phase 1: Prepare NV-DC1 for Cloning
 - Confirm hostname and IP are set
 - Shut down VM
   
 Checkpoint 2.1: Screenshot of VirtualBox showing NV-DC1 powered off
 
-# Phase 2: Clone to Create NV-DC2
+### Phase 2: Clone to Create NV-DC2
 - Right-click NV-DC1 → Clone
 - Name: NV-DC2
 - MAC Address Policy: Generate new MAC
@@ -119,7 +119,7 @@ Checkpoint 2.1: Screenshot of VirtualBox showing NV-DC1 powered off
   
 Checkpoint 2.2: Screenshot of Clone dialog and VirtualBox showing NV-DC2
 
-# Phase 3: Clone to Create NV-FS1
+### Phase 3: Clone to Create NV-FS1
 - Right-click NV-DC1 → Clone
 - Name: NV-FS1
 - MAC Address Policy: Generate new MAC
@@ -127,7 +127,7 @@ Checkpoint 2.2: Screenshot of Clone dialog and VirtualBox showing NV-DC2
   
 Checkpoint 2.3: Screenshot of Clone dialog and VirtualBox showing NV-FS1
 
-# Phase 4: Post-Cloning Configuration
+### Phase 4: Post-Cloning Configuration
 - Start each clone, log in, and rename hostnames appropriately (NV-DC2, NV-FS1)
 - Run ipconfig to note DHCP-assigned address
 - Configure the same address as static, with:
@@ -138,26 +138,26 @@ Checkpoint 2.3: Screenshot of Clone dialog and VirtualBox showing NV-FS1
 Checkpoint 2.4: Screenshots of hostname change, ipconfig, and static IP
 
 # Task 3: Create Windows 11 Client (NV-CL1)
-# Phase 1: Create New VM
+### Phase 1: Create New VM
 - Name: NV-CL1
 - Type: Microsoft Windows
 - Version: Windows 11 (64-bit)
   
 Checkpoint 3.1: Screenshot of New VM dialog
 
-# Phase 2: Assign Resources
+### Phase 2: Assign Resources
 - RAM: 4096 MB
 - CPU: 2 cores
 - Disk: 40 GB
   
 Checkpoint 3.2: Screenshot of resource settings
 
-# Phase 3: Attach Windows 11 ISO
+### Phase 3: Attach Windows 11 ISO
 - Settings → Storage → Attach Windows 11 ISO
   
 Checkpoint 3.3: Screenshot of ISO attached
 
-# Phase 4: Install Windows 11
+### Phase 4: Install Windows 11
 - Install OS
 - Set hostname: NV-CL1
 - Create a local user (e.g., NewVueUser)
