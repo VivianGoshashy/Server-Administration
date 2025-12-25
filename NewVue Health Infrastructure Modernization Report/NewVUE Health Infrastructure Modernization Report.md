@@ -1,4 +1,4 @@
-# Finals: NewVue Health Infrastructure Project Report
+# NewVue Health Infrastructure Project Report
 
 # Background
 Throughout this quarter, you have served as the systems administration team supporting NewVue Health, a healthcare organization in Spokane, WA. Your mission was to modernize the company’s outdated peer-to-peer network by designing and implementing a secure, scalable, and hybrid Windows Server infrastructure integrated with Microsoft cloud services.
