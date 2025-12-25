@@ -43,3 +43,76 @@ Apply Microsoft Security Baselines.
 Configure Windows Update Rings.
 
 Perform remote device actions and verify reporting.
+
+# Task and Steps
+# Task 0  - Configuring Hybrid Azure AD Join (SCP Configuration Prerequisite)
+Before device enrollment can succeed, Azure AD Connect must be configured to enable Hybrid Azure AD Join. This step ensures that domain-joined Windows devices can automatically register with Microsoft Entra ID by using a Service Connection Point (SCP) published in Active Directory.
+
+On the server running Azure AD Connect:
+
+Open Azure AD Connect.
+
+Select Configure to open the configuration wizard.
+
+# Step 2 – Select Device Options
+
+On the Additional Tasks page:
+
+Select Configure device options.
+
+Click Next.
+
+# Step 3 – Authenticate to Microsoft Entra ID
+
+When prompted:
+
+Enter credentials for a Global Administrator or Hybrid Identity Administrator.
+
+Click Next to continue.
+
+# Step 4 – Choose Hybrid Azure AD Join
+
+On the Device Options page:
+
+Select Configure Hybrid Azure AD Join.
+
+Click Next.
+
+# Step 5 – Select Device Operating Systems
+
+Under Device Operating System Selection:
+
+Check Windows 10 or later domain-joined devices.
+
+(Optional) Select Down-level devices only if needed.
+
+Click Next.
+
+# Step 6 – Configure the Service Connection Point (SCP)
+
+Azure AD Connect will prepare to publish the SCP into Active Directory.
+
+On the SCP Configuration page:
+
+Confirm Authentication Service: Azure Active Directory.
+
+Provide Enterprise Admin credentials for the on-premises AD forest.
+
+Click Next.
+
+This step creates/updates the SCP under:
+
+```bash
+CN=Device Registration Configuration, CN=Services, CN=Configuration, DC=newvue, DC=local
+The SCP contains your tenant ID and metadata that domain-joined devices use to discover Microsoft Entra ID during registration.
+```
+# Step 7 – Complete the Configuration
+
+Review the summary.
+
+
+
+
+Click Configure to apply the changes.
+
+When completed, click Exit.
